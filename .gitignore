@@ -4,3 +4,5 @@
 *.idb
 *.pdb
 *.lastbuildstate
+/.vs/SML/v17
+/.vs/SML/FileContentIndex
