@@ -55,9 +55,20 @@ SML::Mat2x2 SML::Mat2x2::Transpose() const
 	return Mat2x2(m[0][0], m[1][0], m[0][1], m[1][1]);
 }
 
-SML::Mat2x2 SML::Mat2x2::Identity() const
+SML::Mat2x2 SML::Mat2x2::Identity()
 {
-	return Mat2x2(1,0, 0,1);
+	return Mat2x2(1, 0,
+				  0, 1);
+}
+
+std::string SML::Mat2x2::toString() const
+{
+	std::string result;
+
+	result += std::to_string(m[0][0]) + ", " + std::to_string(m[1][0]) + "\n" +
+		std::to_string(m[0][1]) + ", " + std::to_string(m[1][1]) + "\n";
+
+	return result;
 }
 
 SML::Mat2x2 SML::Mat2x2::operator*(const Mat2x2& v)const

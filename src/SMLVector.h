@@ -1,5 +1,6 @@
 #pragma once
 #include <math.h>
+#include <string>
 #include <mmintrin.h>
 #include <xmmintrin.h>
 #include "SMLMat3x3.h"

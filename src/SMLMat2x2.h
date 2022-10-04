@@ -23,6 +23,8 @@ namespace SML
 		Mat2x2 operator/(const float& s)const;
 
 		Mat2x2 Transpose() const;
-		Mat2x2 Identity() const;
+		static Mat2x2 Identity();
+
+		std::string toString()const;
 	};
 }

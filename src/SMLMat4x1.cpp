@@ -48,3 +48,11 @@ SML::Mat1x4 SML::Mat4x1::transpose() const
 {
 	return Mat1x4(a, b, c, d);
 }
+
+std::string SML::Mat4x1::toString() const
+{
+	std::string result;
+	result += std::to_string(a) + ", " + std::to_string(b) + ", " + std::to_string(c) + ", " + std::to_string(d);
+
+	return result;
+}

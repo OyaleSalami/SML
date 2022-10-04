@@ -39,3 +39,11 @@ SML::Mat1x3 SML::Mat3x1::transpose()
 {
 	return Mat1x3(a, b, c);
 }
+
+std::string SML::Mat3x1::toString() const
+{
+	std::string result;
+	result += std::to_string(a) + ", " + std::to_string(b) + ", " + std::to_string(c);
+
+	return result;
+}
