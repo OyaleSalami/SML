@@ -21,5 +21,7 @@ namespace SML
 		Mat3x1 operator-(const Mat3x1 m) const;
 
 		Mat1x3 transpose();
+
+		std::string toString()const;
 	};
 }

@@ -47,12 +47,25 @@ SML::Mat3x3 SML::Mat3x3::Transpose() const
 	return Mat3x3(m[0][0], m[1][0], m[2][0], m[0][1], m[1][1], m[2][1], m[0][2], m[1][2], m[2][2]);
 }
 
-SML::Mat3x3 SML::Mat3x3::Identity() const
+SML::Mat3x3 SML::Mat3x3::Identity()
 {
-	return Mat3x3(1,0,0, 0,1,0, 0,0,1);
+	return Mat3x3(1, 0, 0,
+				  0, 1, 0, 
+				  0, 0, 1);
 }
 
 float SML::Mat3x3::det()const
 {
 	return float(m[0][0] * m[1][1] * m[2][2] - m[0][0] * m[2][1] * m[1][2] - m[0][1] * m[1][0] * m[2][2] - m[1][2] * m[2][0] * -m[0][1] + m[0][2] * m[1][0] * m[2][1] - m[0][2] * m[2][0] * m[1][1]);
+}
+
+std::string SML::Mat3x3::toString() const
+{
+	std::string result;
+
+	result += std::to_string(m[0][0]) + " " + std::to_string(m[0][1]) + " " + std::to_string(m[0][2]) + "\n";
+	result += std::to_string(m[1][0]) + " " + std::to_string(m[1][1]) + " " + std::to_string(m[1][2]) + "\n";
+	result += std::to_string(m[2][0]) + " " + std::to_string(m[2][1]) + " " + std::to_string(m[2][2]) + "\n";
+
+	return result;
 }

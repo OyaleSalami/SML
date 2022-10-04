@@ -22,5 +22,7 @@ namespace SML
 		Mat4x1 operator-(const Mat4x1& m) const;
 
 		Mat1x4 transpose() const;
+
+		std::string toString()const;
 	};
 }

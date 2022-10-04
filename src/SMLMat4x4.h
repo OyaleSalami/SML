@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 #include <math.h>
 #include "SMLVector.h"
 #include "SMLMat3x3.h"
@@ -24,6 +25,9 @@ namespace SML
 		Mat4x4 operator*(const Mat4x4& M)const;
 
 		Mat4x4 transpose(/*to become column oriented*/) const;
+
+		std::string toString()const;
+		static Mat4x4 Identity();
 	};
 
 }

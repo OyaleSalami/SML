@@ -1,5 +1,6 @@
 #pragma once
 #include <math.h>
+#include <string>
 
 namespace SML
 {
@@ -22,8 +23,9 @@ namespace SML
 		//Mat3x3 operator*(const Mat3x3& M)const;
 
 		Mat3x3 Transpose() const;
-		Mat3x3 Identity() const;
+		static Mat3x3 Identity();
 
 		float det()const;
+		std::string toString()const;
 	};
 }

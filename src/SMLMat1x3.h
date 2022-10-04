@@ -1,4 +1,5 @@
 #pragma once
+
 #include "SMLVector.h"
 
 namespace SML
@@ -25,6 +26,8 @@ namespace SML
 		Mat1x3 operator*(const Mat3x3& m)const;
 
 		Mat3x1 transpose() const;
+
+		std::string toString()const;
 	};
 
 }
