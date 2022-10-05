@@ -6,7 +6,7 @@ SML::Quat::Quat()
 	x = y = z = 0;
 }
 
-SML::Quat::Quat(Vector3& axis, float& angle)
+SML::Quat::Quat(const Vector3& axis, const float& angle)
 {
 	x = axis.x * sin(angle / 2);
 	y = axis.y * sin(angle / 2);
