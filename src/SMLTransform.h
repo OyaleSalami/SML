@@ -1,5 +1,6 @@
 #pragma once
 #include "SMLVector.h"
+#include "SMLEuler.h"
 
 namespace SML
 {
@@ -24,7 +25,7 @@ namespace SML
 	{
 	private:
 		Vector3 position;
-		Vector3 rotation; //TODO: change this to a Quaternion or a Matrix
+		Euler rotation; //TODO: change this to a Quaternion or a Matrix
 		Vector3 scale;
 
 	public:

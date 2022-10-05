@@ -17,7 +17,7 @@ SML::Quat::Quat(Vector3& axis, float& angle)
 
 float SML::Quat::magnitude() const
 {
-	return (sqrt((x * x) + (y * y) + (z * z) + (w * w)));
+	return (sqrt(double(x * x) + double(y * y) + double(z * z) + double(w * w)));
 }
 
 SML::Quat SML::Quat::operator+(const Quat& q) const
