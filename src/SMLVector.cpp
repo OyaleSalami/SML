@@ -16,7 +16,7 @@ SML::Vector2::Vector2(const float& X, const float& Y)
 
 float SML::Vector2::Length() const
 {
-	return sqrt( (x*x) + (y*y) );
+	return sqrt( double(x*x) + double(y*y) );
 }
 
 float SML::Vector2::LengthSqr() const

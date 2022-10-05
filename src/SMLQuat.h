@@ -8,7 +8,7 @@ namespace SML
 	{
 	public:
 		Quat();
-		Quat(Vector3& axis, float& angle);
+		Quat(const Vector3& axis, const float& angle);
 		float x, y, z, w;
 
 		float magnitude() const;

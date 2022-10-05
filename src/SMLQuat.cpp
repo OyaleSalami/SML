@@ -6,7 +6,7 @@ SML::Quat::Quat()
 	x = y = z = 0;
 }
 
-SML::Quat::Quat(Vector3& axis, float& angle)
+SML::Quat::Quat(const Vector3& axis, const float& angle)
 {
 	x = axis.x * sin(angle / 2);
 	y = axis.y * sin(angle / 2);
@@ -17,7 +17,7 @@ SML::Quat::Quat(Vector3& axis, float& angle)
 
 float SML::Quat::magnitude() const
 {
-	return (sqrt((x * x) + (y * y) + (z * z) + (w * w)));
+	return (sqrt(double(x * x) + double(y * y) + double(z * z) + double(w * w)));
 }
 
 SML::Quat SML::Quat::operator+(const Quat& q) const
