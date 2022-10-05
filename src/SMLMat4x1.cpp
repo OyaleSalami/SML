@@ -9,14 +9,14 @@ SML::Mat4x1::Mat4x1(const float& A, const float& B, const float& C, const float&
 	d = D;
 }
 
-SML::Mat4x1::Mat4x1(const Vector& v)
+SML::Mat4x1::Mat4x1(const Vector3& v)
 {
 	a = v.x;
 	b = v.y;
 	c = v.z;
 }
 
-SML::Mat4x1::Mat4x1(const Point& v)
+SML::Mat4x1::Mat4x1(const Point3& v)
 {
 	a = v.x;
 	b = v.y;

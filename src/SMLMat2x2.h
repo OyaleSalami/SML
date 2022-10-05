@@ -11,7 +11,7 @@ namespace SML
 		Mat2x2() {}
 		Mat2x2(const Mat2x2& v);
 		Mat2x2(const float& a, const float& b, const float& c, const float& d);
-		Mat2x2(const Vector& r1, const Vector& r2);
+		Mat2x2(const Vector3& r1, const Vector3& r2);
 
 		float det()const;
 

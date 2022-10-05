@@ -7,59 +7,83 @@
 
 namespace SML
 {
-	class Vector
+	class Vector3
 	{
 	public:
-		Vector() {}
-		Vector(const Vector& a);
-		Vector(const float& X, const float& Y);
-		Vector(const float& X, const float& Y, const float& Z);
+		Vector3() {}
+		Vector3(const Vector3& a);
+		Vector3(const float& X, const float& Y, const float& Z);
 
-		float x = 0, y = 0, z = 0, w = 0;
+		float x = 0, y = 0, z = 0;
 
 		float Length() const;
 		float LengthSqr() const;
-		float dot(const Vector& a) const;
+		float dot(const Vector3& a) const;
 
-		Vector Normalized() const;
-		Vector Cross(const Vector& a) const;
+		Vector3 Normalized() const;
+		Vector3 Cross(const Vector3& a) const;
 
-		Vector operator+(const Vector& a) const;
-		Vector operator-(const Vector& a) const;
+		Vector3 operator+(const Vector3& a) const;
+		Vector3 operator-(const Vector3& a) const;
 
-		Vector operator/(const float& a) const;
-		Vector operator*(const float& a) const;
+		Vector3 operator/(const float& a) const;
+		Vector3 operator*(const float& a) const;
 
-		Vector operator*(const Mat3x3& a) const;
+		Vector3 operator*(const Mat3x3& a) const;
 
-		Vector Scale(float& a, float& b, float& c) const;
-
+		Vector3 Scale(const float& a, const float& b, const float& c) const;
 	};
 
-	class Point
+	class Vector2
 	{
 	public:
-		Point() {}
-		Point(const Point& a);
-		Point(const float& X, const float& Y);
-		Point(const float& X, const float& Y, const float& Z);
+		Vector2() {}
+		Vector2(const Vector2& a);
+		Vector2(const float& X, const float& Y);
 
-		float x = 0, y = 0, z = 0, w = 1;
-
-		Vector operator-(const Point& a) const;
-		Point operator+(const Vector& a) const;
+		float x = 0, y = 0;
 
 		float Length() const;
 		float LengthSqr() const;
-		float dot(const Point& a) const;
-		float dot(const Vector& a) const;
+		float dot(const Vector2& a) const;
 
-		Point Normalized() const;
-		Point Cross(const Point& a) const;
+		Vector2 Normalized() const;
+		Vector2 Cross(const Vector2& a) const;
 
-		Point operator/(const float& a) const;
-		Point operator*(const float& a) const;
+		Vector2 operator+(const Vector2& a) const;
+		Vector2 operator-(const Vector2& a) const;
 
-		Point operator*(const Mat3x3& a) const;
+		Vector2 operator/(const float& a) const;
+		Vector2 operator*(const float& a) const;
+
+		Vector2 operator*(const Mat3x3& a) const;
+
+		Vector2 Scale(const float& a, const float& b) const;
+	};
+
+	class Point3
+	{
+	public:
+		Point3() {}
+		Point3(const Point3& a);
+		Point3(const float& X, const float& Y, const float& Z);
+
+		float x = 0, y = 0, z = 0;
+
+		Vector3 operator-(const Point3& a) const;
+		Point3 operator+(const Vector3& a) const;
+
+		float Length() const;
+		float LengthSqr() const;
+		float dot(const Point3& a) const;
+		float dot(const Vector3& a) const;
+
+		Point3 Normalized() const;
+		Point3 Cross(const Point3& a) const;
+
+		Point3 operator/(const float& a) const;
+		Point3 operator*(const float& a) const;
+
+		Point3 operator*(const Mat3x3& a) const;
 	};
 }

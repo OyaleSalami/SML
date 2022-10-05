@@ -22,7 +22,7 @@ SML::Mat4x4::Mat4x4(const float& m1, const float& m2, const float& m3, const flo
 	m[3][0] = m13; m[3][1] = m14; m[3][2] = m15; m[3][3] = m16;
 }
 
-SML::Mat4x4::Mat4x4(const Vector& r1, const Vector& r2, const Vector& r3, const Vector& t)
+SML::Mat4x4::Mat4x4(const Vector3& r1, const Vector3& r2, const Vector3& r3, const Vector3& t)
 {
 	m[0][0] = r1.x; m[0][1] = r1.y; m[0][2] = r1.z;		 //m[0][3] = m4;
 
@@ -33,7 +33,7 @@ SML::Mat4x4::Mat4x4(const Vector& r1, const Vector& r2, const Vector& r3, const 
 	m[3][0] = t.x;  m[3][1] = t.y;  m[3][2] = t.z;		 m[3][3] = 1;
 }
 
-SML::Mat4x4::Mat4x4(const Mat3x3& r, const Vector& t)
+SML::Mat4x4::Mat4x4(const Mat3x3& r, const Vector3& t)
 {
 	m[0][0] = r.m[0][0]; m[0][1] = r.m[0][1]; m[0][2] = r.m[0][2];		 //m[0][3] = m4;
 
