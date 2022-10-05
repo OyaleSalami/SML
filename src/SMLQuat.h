@@ -3,12 +3,12 @@
 
 namespace SML
 {
-	class Vector;
+	class Vector3;
 	class Quat
 	{
 	public:
 		Quat();
-		Quat(Vector& axis, float& angle);
+		Quat(Vector3& axis, float& angle);
 		float x, y, z, w;
 
 		float magnitude() const;
