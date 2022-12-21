@@ -4,12 +4,3 @@
 *.idb
 *.pdb
 *.lastbuildstate
-<<<<<<< HEAD
-/.vs/SML
-/x64/Debug
-/xero.txt
-=======
-/.vs/SML/v17
-/.vs/SML/FileContentIndex
-/x64/Debug
->>>>>>> a39fe8b300929640f85be383885e9b4f02710298
