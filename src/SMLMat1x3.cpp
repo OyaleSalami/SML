@@ -9,14 +9,14 @@ SML::Mat1x3::Mat1x3(const float& A, const float& B, const float& C)
 	c = C;
 }
 
-SML::Mat1x3::Mat1x3(const Vector& v)
+SML::Mat1x3::Mat1x3(const Vector3& v)
 {
 	a = v.x;
 	b = v.y;
 	c = v.z;
 }
 
-SML::Mat1x3::Mat1x3(const Point& v)
+SML::Mat1x3::Mat1x3(const Point3& v)
 {
 	a = v.x;
 	b = v.y;
@@ -54,4 +54,12 @@ SML::Mat1x3 SML::Mat1x3::operator*(const Mat3x3& m) const
 SML::Mat3x1 SML::Mat1x3::transpose() const
 {
 	return Mat3x1(a, b, c);
+}
+
+std::string SML::Mat1x3::toString() const
+{
+	std::string result;
+	result += std::to_string(a) + ", " + std::to_string(b) + ", " + std::to_string(c);
+
+	return result;
 }

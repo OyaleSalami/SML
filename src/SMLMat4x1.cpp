@@ -9,14 +9,14 @@ SML::Mat4x1::Mat4x1(const float& A, const float& B, const float& C, const float&
 	d = D;
 }
 
-SML::Mat4x1::Mat4x1(const Vector& v)
+SML::Mat4x1::Mat4x1(const Vector3& v)
 {
 	a = v.x;
 	b = v.y;
 	c = v.z;
 }
 
-SML::Mat4x1::Mat4x1(const Point& v)
+SML::Mat4x1::Mat4x1(const Point3& v)
 {
 	a = v.x;
 	b = v.y;
@@ -47,4 +47,12 @@ SML::Mat4x1 SML::Mat4x1::operator-(const Mat4x1& m) const
 SML::Mat1x4 SML::Mat4x1::transpose() const
 {
 	return Mat1x4(a, b, c, d);
+}
+
+std::string SML::Mat4x1::toString() const
+{
+	std::string result;
+	result += std::to_string(a) + ", " + std::to_string(b) + ", " + std::to_string(c) + ", " + std::to_string(d);
+
+	return result;
 }

@@ -10,8 +10,8 @@ namespace SML
 	public:
 		Mat4x1() {}
 		Mat4x1(const float& A, const float& B, const float& C, const float& D);
-		Mat4x1(const Vector& v);
-		Mat4x1(const Point& v);
+		Mat4x1(const Vector3& v);
+		Mat4x1(const Point3& v);
 
 		float a = 0, b = 0, c = 0, d = 0;
 
@@ -22,5 +22,7 @@ namespace SML
 		Mat4x1 operator-(const Mat4x1& m) const;
 
 		Mat1x4 transpose() const;
+
+		std::string toString()const;
 	};
 }

@@ -10,7 +10,7 @@ namespace SML
 	public:
 		Mat3x1() {}
 		Mat3x1(float A, float B, float C);
-		Mat3x1(Vector v);
+		Mat3x1(Vector3 v);
 
 		float a = 0, b = 0, c = 0;
 
@@ -21,5 +21,7 @@ namespace SML
 		Mat3x1 operator-(const Mat3x1 m) const;
 
 		Mat1x3 transpose();
+
+		std::string toString()const;
 	};
 }

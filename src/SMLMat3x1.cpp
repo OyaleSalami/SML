@@ -8,7 +8,7 @@ SML::Mat3x1::Mat3x1(float A, float B, float C)
 	c = C;
 }
 
-SML::Mat3x1::Mat3x1(Vector v)
+SML::Mat3x1::Mat3x1(Vector3 v)
 {
 	a = v.x;
 	b = v.y;
@@ -38,4 +38,12 @@ SML::Mat3x1 SML::Mat3x1::operator-(const Mat3x1 m) const
 SML::Mat1x3 SML::Mat3x1::transpose()
 {
 	return Mat1x3(a, b, c);
+}
+
+std::string SML::Mat3x1::toString() const
+{
+	std::string result;
+	result += std::to_string(a) + ", " + std::to_string(b) + ", " + std::to_string(c);
+
+	return result;
 }

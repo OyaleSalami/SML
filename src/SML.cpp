@@ -9,14 +9,10 @@
 
 int main()
 {
-	Vector a(1.345, 1.23, 3.556);
-	SML::Vector b(2.145, 7.089, 0.0000156);
-	SML::Vector result(a + b);
-	Vector subresult(a - b);
+	SML::Mat4x4 mat1(1,2,3,4,5,6,7,8,8,9,0,8,7,6,5,4);
+	SML::Mat4x4 mat2(1,2,3,4,5,6,7,8,8,9,0,8,7,6,5,4);
 
-	std::cout << result.x << " " << result.y << " " << result.z << std::endl;
-	std::cout << " . " << std::endl;
-	std::cout << subresult.x << " " << subresult.y << " " << subresult.z << std::endl;
+	std::cout << (mat1+ mat2).toString()  << std::endl;
 	std::cout << "Hello From This Side Of The SML Library!" << std::endl;
 
 	std::cin.get();

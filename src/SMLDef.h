@@ -4,7 +4,7 @@
 
 #include "SMLVector.h"
 
-typedef SML::Vector Vector;
+typedef SML::Vector3 Vector3;
 
-typedef SML::Point Point;
+typedef SML::Point3 Point3;
 
