@@ -9,7 +9,7 @@ SML::Mat4x1::Mat4x1(const float& A, const float& B, const float& C, const float&
 	d = D;
 }
 
-SML::Mat4x1::Mat4x1(const Vector3& v)
+SML::Mat4x1::Mat4x1(const Vec3& v)
 {
 	a = v.x;
 	b = v.y;

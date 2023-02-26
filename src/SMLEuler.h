@@ -9,6 +9,6 @@ public:
 	Euler();
 	Euler(float& pitch, float& yaw, float& roll);
 
-	SML::Vector3 ToVector() const;
+	SML::Vec3 ToVec() const;
 	void Normalize();
 };

@@ -11,9 +11,9 @@
 //need to be divided into multiple files.
 //I cleaned it..XD
 
-SML::Vector3 LERP(Vector3 a, Vector3 b, float val);
+SML::Vec3 LERP(Vec3 a, Vec3 b, float val);
 
 
-SML::Vector3 rotatex(Vector3 v, float angle);
-SML::Vector3 rotatey(Vector3 v, float angle);
-SML::Vector3 rotatez(Vector3 v, float angle);
+SML::Vec3 rotatex(Vec3 v, float angle);
+SML::Vec3 rotatey(Vec3 v, float angle);
+SML::Vec3 rotatez(Vec3 v, float angle);

@@ -12,7 +12,7 @@ namespace SML
 	public:
 		Mat1x4() {}
 		Mat1x4(const float& A, const float& B, const float& C, const float& D);
-		Mat1x4(const Vector3& v);
+		Mat1x4(const Vec3& v);
 		Mat1x4(const Point3& v);
 
 		float a = 0, b = 0, c = 0, d = 0;

@@ -11,7 +11,7 @@ namespace SML
 	}
 	
 	template<class T>
-	SML::Vec2<T>::Vec2(const T& X, const T& Y)
+	Vec2<T>::Vec2(const T& X, const T& Y)
 	{
 		x = X;
 		y = Y;
@@ -38,7 +38,7 @@ namespace SML
 	template<class T>
 	Vec2<T> Vec2<T>::normalized() const
 	{
-		return Vec2(*this / Length());
+		return (this * (1/magnitude()));
 	}
 
 	template<class T>
@@ -54,9 +54,30 @@ namespace SML
 	}
 
 	template<class T>
+	Vec2<T> Vec2<T>::operator/(const int& a) const
+	{
+		float k = 1 / a; //Optimization trick
+		return Vec2(x * k, y * k);
+	}
+
+	template<class T>
 	Vec2<T> Vec2<T>::operator/(const float& a) const
 	{
-		return Vec2(x / a, y / a);
+		float k = 1 / a; //Optimization trick
+		return Vec2(x * k, y * k);
+	}
+
+	template<class T>
+	Vec2<T> Vec2<T>::operator/(const double& a) const
+	{
+		float k = 1 / a; //Optimization trick
+		return Vec2(x * k, y * k);
+	}
+
+	template<class T>
+	Vec2<T> Vec2<T>::operator*(const int& a) const
+	{
+		return Vec2(x * a, y * a);
 	}
 
 	template<class T>
@@ -66,11 +87,29 @@ namespace SML
 	}
 
 	template<class T>
+	Vec2<T> Vec2<T>::operator*(const double& a) const
+	{
+		return Vec2(x * a, y * a);
+	}
+
+	template<class T>
+	Vec2<T> Vec2<T>::Scale(const int& a, const int& b) const
+	{
+		return Vec2(x * a, y * b);
+	}
+
+	template<class T>
 	Vec2<T> Vec2<T>::Scale(const float& a, const float& b) const
 	{
 		return Vec2(x * a, y * b);
 	}
-	#pragma endregion
+
+	template<class T>
+	Vec2<T> Vec2<T>::Scale(const double& a, const double& b) const
+	{
+		return Vec2(x * a, y * b);
+	}
+	#pragma endregion Function definitions for the Vec2 class
 
 	#pragma region Vec3
 
@@ -111,31 +150,29 @@ namespace SML
 	template<class T>
 	Vec3<T> Vec3<T>::normalized() const
 	{
-		return Vec3(*this / LengthSqr());
+		return Vec3(this * (1/magnitude()));
 	}
 
 	template<class T>
 	Vec3<T> Vec3<T>::operator+(const Vec3& a) const
 	{
-		Vec3 result;
-		_declspec(align(16)) Vec3 X(x, y, z);
-		_declspec(align(16)) Vec3 Y(a.x, a.y, a.z);
-
-		_mm_store_ps(&result.x, _mm_add_ps(_mm_load_ps(&X.x), _mm_load_ps(&Y.x)));
-
-		return result;
+		x += a.x;
+		y += a.y;
+		z += a.z;
 	}
 
 	template<class T>
 	Vec3<T> Vec3<T>::operator-(const Vec3& a) const
 	{
-		Vec3 result;
-		_declspec(align(16)) Vec3 X(x, y, z);
-		_declspec(align(16)) Vec3 Y(a.x, a.y, a.z);
+		x -= a.x;
+		y -= a.y;
+		z -= a.z;
+	}
 
-		_mm_store_ps(&result.x, _mm_sub_ps(_mm_load_ps(&X.x), _mm_load_ps(&Y.x)));
-
-		return result;
+	template<class T>
+	Vec3<T> Vec3<T>::operator/(const int& a) const
+	{
+		return Vec3(x / a, y / a, z / a);
 	}
 
 	template<class T>
@@ -145,7 +182,25 @@ namespace SML
 	}
 
 	template<class T>
+	Vec3<T> Vec3<T>::operator/(const double& a) const
+	{
+		return Vec3(x / a, y / a, z / a);
+	}
+
+	template<class T>
+	Vec3<T> Vec3<T>::operator*(const int& a) const
+	{
+		return Vec3(x * a, y * a, z * a);
+	}
+
+	template<class T>
 	Vec3<T> Vec3<T>::operator*(const float& a) const
+	{
+		return Vec3(x * a, y * a, z * a);
+	}
+
+	template<class T>
+	Vec3<T> Vec3<T>::operator*(const double& a) const
 	{
 		return Vec3(x * a, y * a, z * a);
 	}
@@ -156,9 +211,14 @@ namespace SML
 		return Vec3(
 			((x * a.m[0][0]) + (y * a.m[1][0]) + (z * a.m[2][0])),
 			((x * a.m[0][1]) + (y * a.m[1][1]) + (z * a.m[2][1])),
-			((x * a.m[0][2]) + (y * a.m[1][2]) + (z * a.m[2][2])));
+			((x * a.m[0][2]) + (y * a.m[1][2]) + (z * a.m[2][2])) );
 	}
 
+	template<class T>
+	Vec3<T> Vec3<T>::scale(const int& a, const int& b, const int& c) const
+	{
+		return Vec3(a * x, b * y, c * z);
+	}
 
 	template<class T>
 	Vec3<T> Vec3<T>::scale(const float& a, const float& b, const float& c) const
@@ -167,13 +227,18 @@ namespace SML
 	}
 
 	template<class T>
+	Vec3<T> Vec3<T>::scale(const double& a, const double& b, const double& c) const
+	{
+		return Vec3(a * x, b * y, c * z);
+	}
+
+	template<class T>
 	Vec3<T> Vec3<T>::cross(const Vec3& a) const
 	{
 		return Vec3((y * a.z) - (z * a.y),
-			(z * a.x) - (x * a.z),
-			(x * a.y) - (y * a.x));
+					(z * a.x) - (x * a.z),
+					(x * a.y) - (y * a.x) );
 	}
 
-	#pragma endregion
-
+	#pragma endregion Function definitions for the Vec3 class
 }

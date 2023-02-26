@@ -4,7 +4,7 @@
 
 namespace SML
 {
-	class Vector3;
+	class Vec3;
 	class Mat3x3
 	{
 	public:
@@ -13,7 +13,7 @@ namespace SML
 		Mat3x3() {}
 		Mat3x3(const Mat3x3& v);
 		Mat3x3(float A11, float A12, float A13, float A21, float A22, float A23, float A31, float A32, float A33);
-		Mat3x3(Vector3 v1, Vector3 v2, Vector3 v3);
+		Mat3x3(Vec3 v1, Vec3 v2, Vec3 v3);
 
 		Mat3x3 operator*(const float& s)const;
 		Mat3x3 operator/(const float& s)const;

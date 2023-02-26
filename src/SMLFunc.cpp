@@ -1,10 +1,10 @@
 #include "SMLFunc.h"
 
-Vector3 addVector(Vector3& a, Vector3& b)
+Vec3 addVec(Vec3& a, Vec3& b)
 {
-	Vector3 result;
-	_declspec(align(16)) Vector3 x;
-	_declspec(align(16)) Vector3 y;
+	Vec3 result;
+	_declspec(align(16)) Vec3 x;
+	_declspec(align(16)) Vec3 y;
 
 	__m128 a128;
 	__m128 b128;
@@ -20,12 +20,12 @@ Vector3 addVector(Vector3& a, Vector3& b)
 }
 
 
-Vector3 LERP(Vector3 a, Vector3 b, float val)
+Vec3 LERP(Vec3 a, Vec3 b, float val)
 {
-	return Vector3(a * (1 - val) + b * val);
+	return Vec3(a * (1 - val) + b * val);
 }
 
-Vector3 rotatex(Vector3 v, float angle)
+Vec3 rotatex(Vec3 v, float angle)
 {
 	SML::Mat1x4 T(v.x, v.y, v.z, 1);
 
@@ -34,10 +34,10 @@ Vector3 rotatex(Vector3 v, float angle)
 				  0, -sin(angle), cos(angle), 0,
 				  0,			  0,			  0, 1);
 
-	return Vector3((T * m).a, (T * m).b, (T * m).c);
+	return Vec3((T * m).a, (T * m).b, (T * m).c);
 }
 
-Vector3 rotatey(Vector3 v, float angle)
+Vec3 rotatey(Vec3 v, float angle)
 {
 	SML::Mat1x4 T(v.x, v.y, v.z, 1);
 
@@ -46,10 +46,10 @@ Vector3 rotatey(Vector3 v, float angle)
 							   0,		       0, 1, 0, 
 							   0,              0, 0, 1);
 	
-	return Vector3((T * m).a, (T * m).b, (T * m).c);
+	return Vec3((T * m).a, (T * m).b, (T * m).c);
 }
 
-Vector3 rotatez(Vector3 v, float angle)
+Vec3 rotatez(Vec3 v, float angle)
 {
 	SML::Mat1x4 T(v.x, v.y, v.z, 1);
 
@@ -58,5 +58,5 @@ Vector3 rotatez(Vector3 v, float angle)
 				  sin(angle),  0, cos(angle),  0,
 		                      0,  0,               0, 1);
 	
-	return Vector3((T * m).a, (T * m).b, (T * m).c);
+	return Vec3((T * m).a, (T * m).b, (T * m).c);
 }
