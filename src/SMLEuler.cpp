@@ -10,9 +10,9 @@ Euler::Euler(float& pitch, float& yaw, float& roll)
 	p = pitch; y = yaw, r = roll;
 }
 
-SML::Vec3 Euler::ToVec() const
+SML::Vec3f Euler::ToVec() const
 {
-	SML::Vec3 result;
+	SML::Vec3f result;
 	result.x = cos(y) * cos(p);
 	result.y = sin(p);
 	result.z = sin(y) * cos(p);

@@ -6,7 +6,7 @@ SML::Mat2x2::Mat2x2(const float& a, const float& b, const float& c, const float&
 	m[1][0] = c;  m[1][1] = d;
 }
 
-SML::Mat2x2::Mat2x2(const Vec3& r1, const Vec3& r2)
+SML::Mat2x2::Mat2x2(const Vec3f& r1, const Vec3f& r2)
 {
 	m[0][0] = r1.x;  m[0][1] = r1.y;
 	m[1][0] = r2.x;  m[1][1] = r2.y;

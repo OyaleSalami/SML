@@ -1,7 +1,7 @@
 #pragma once
-#include <math.h>
 #include "SMLVector.h"
 
+#pragma 
 class Euler
 {
 public:
@@ -9,6 +9,6 @@ public:
 	Euler();
 	Euler(float& pitch, float& yaw, float& roll);
 
-	SML::Vec3 ToVec() const;
+	SML::Vec3f ToVec() const;
 	void Normalize();
 };

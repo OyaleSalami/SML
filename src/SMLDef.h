@@ -4,6 +4,9 @@
 
 #include "SMLVector.h"
 
+#include <mmintrin.h>
+#include <xmmintrin.h>
+
 //void VectorAdd(const Vec3f& a) const
 //{
 //	Vec3f result;

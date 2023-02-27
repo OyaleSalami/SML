@@ -1,12 +1,11 @@
 #include "SMLQuat.h"
-#include "SMLVector.h"
 
 SML::Quat::Quat()
 {
 	x = y = z = 0;
 }
 
-SML::Quat::Quat(const Vec3& axis, const float& angle)
+SML::Quat::Quat(const Vec3f& axis, const float& angle)
 {
 	x = axis.x * sin(angle / 2);
 	y = axis.y * sin(angle / 2);

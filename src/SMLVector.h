@@ -1,13 +1,12 @@
 #pragma once
 #include <math.h>
-#include <mmintrin.h>
-#include <xmmintrin.h>
-#include "SMLMat3x3.h"
-#include "SMLMat2x2.h"
+
+class Mat3x3;
+class Mat2x2;
 
 namespace SML
 {
-	template<class T>
+	template <class T>
 	class Vec2
 	{
 	public:
@@ -53,14 +52,14 @@ namespace SML
 		Vec2 operator*(const Mat2x2& a) const;
 
 		/// <summary>Returns a vector that has been scaled by the params(int)</summary>
-		Vec2 Scale(const int& a, const int& b) const;
+		Vec2 scale(const int& a, const int& b) const;
 		/// <summary>Returns a vector that has been scaled by the params(float)</summary>
-		Vec2 Scale(const float& a, const float& b) const;
+		Vec2 scale(const float& a, const float& b) const;
 		/// <summary>Returns a vector that has been scaled by the params(double)</summary>
-		Vec2 Scale(const double& a, const double& b) const;
+		Vec2 scale(const double& a, const double& b) const;
 	};
 
-	template<class T>
+	template <class T>
 	class Vec3
 	{
 	public:

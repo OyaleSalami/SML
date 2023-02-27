@@ -8,7 +8,7 @@ SML::Mat3x1::Mat3x1(float A, float B, float C)
 	c = C;
 }
 
-SML::Mat3x1::Mat3x1(Vec3 v)
+SML::Mat3x1::Mat3x1(Vec3f v)
 {
 	a = v.x;
 	b = v.y;

@@ -1,4 +1,6 @@
 #include "SMLVector.h"
+#include "SMLMat3x3.h"
+#include "SMLMat2x2.h"
 
 namespace SML
 {
@@ -93,19 +95,19 @@ namespace SML
 	}
 
 	template<class T>
-	Vec2<T> Vec2<T>::Scale(const int& a, const int& b) const
+	Vec2<T> Vec2<T>::scale(const int& a, const int& b) const
 	{
 		return Vec2(x * a, y * b);
 	}
 
 	template<class T>
-	Vec2<T> Vec2<T>::Scale(const float& a, const float& b) const
+	Vec2<T> Vec2<T>::scale(const float& a, const float& b) const
 	{
 		return Vec2(x * a, y * b);
 	}
 
 	template<class T>
-	Vec2<T> Vec2<T>::Scale(const double& a, const double& b) const
+	Vec2<T> Vec2<T>::scale(const double& a, const double& b) const
 	{
 		return Vec2(x * a, y * b);
 	}
@@ -205,14 +207,14 @@ namespace SML
 		return Vec3(x * a, y * a, z * a);
 	}
 
-	template<class T>
-	Vec3<T> Vec3<T>::operator*(const Mat3x3& a) const
+	//template<class T>
+	/*Vec3<T> Vec3<T>::operator*(const Mat3x3& a) const
 	{
 		return Vec3(
 			((x * a.m[0][0]) + (y * a.m[1][0]) + (z * a.m[2][0])),
 			((x * a.m[0][1]) + (y * a.m[1][1]) + (z * a.m[2][1])),
 			((x * a.m[0][2]) + (y * a.m[1][2]) + (z * a.m[2][2])) );
-	}
+	}*/
 
 	template<class T>
 	Vec3<T> Vec3<T>::scale(const int& a, const int& b, const int& c) const
