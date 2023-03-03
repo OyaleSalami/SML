@@ -4,3 +4,6 @@
 *.idb
 *.pdb
 *.lastbuildstate
+/.vs
+/x64/Debug
+/xero.txt

@@ -6,7 +6,7 @@ SML::Mat2x2::Mat2x2(const float& a, const float& b, const float& c, const float&
 	m[1][0] = c;  m[1][1] = d;
 }
 
-SML::Mat2x2::Mat2x2(const Vector3& r1, const Vector3& r2)
+SML::Mat2x2::Mat2x2(const Vec3f& r1, const Vec3f& r2)
 {
 	m[0][0] = r1.x;  m[0][1] = r1.y;
 	m[1][0] = r2.x;  m[1][1] = r2.y;
@@ -26,9 +26,9 @@ float SML::Mat2x2::det()const
 SML::Mat2x2 SML::Mat2x2::operator+(const Mat2x2& v)const
 {
 	return Mat2x2(m[0][0] + v.m[0][0], m[0][1] + v.m[0][1], m[1][0] + v.m[1][0], m[1][1] + v.m[1][1]);
-	/*Vector3 result;
-	_declspec(align(16)) Vector3 X(m[0][0], m[][], m[][]);
-	_declspec(align(16)) Vector3 Y(v.m[][], v.m[][], v.m[][]);
+	/*Vec3 result;
+	_declspec(align(16)) Vec3 X(m[0][0], m[][], m[][]);
+	_declspec(align(16)) Vec3 Y(v.m[][], v.m[][], v.m[][]);
 
 	_mm_store_ps(&result.x, _mm_add_ps(_mm_load_ps(&X.x), _mm_load_ps(&Y.x)));
 

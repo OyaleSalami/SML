@@ -10,19 +10,11 @@ SML::Mat1x4::Mat1x4(const float& A, const float& B, const float& C, const float&
 	d = D;
 }
 
-SML::Mat1x4::Mat1x4(const Vector3& v)
+SML::Mat1x4::Mat1x4(const Vec3f& v)
 {
 	a = v.x;
 	b = v.y;
 	c = v.z;
-}
-
-SML::Mat1x4::Mat1x4(const Point3& v)
-{
-	a = v.x;
-	b = v.y;
-	c = v.z;
-	d = 1;
 }
 
 SML::Mat1x4 SML::Mat1x4::operator*(const float& s) const

@@ -1,10 +1,9 @@
 #pragma once
-#include <math.h>
 #include <string>
+#include "SMLVector.h"
 
 namespace SML
 {
-	class Vector3;
 	class Mat3x3
 	{
 	public:
@@ -13,7 +12,7 @@ namespace SML
 		Mat3x3() {}
 		Mat3x3(const Mat3x3& v);
 		Mat3x3(float A11, float A12, float A13, float A21, float A22, float A23, float A31, float A32, float A33);
-		Mat3x3(Vector3 v1, Vector3 v2, Vector3 v3);
+		Mat3x3(Vec3f v1, Vec3f v2, Vec3f v3);
 
 		Mat3x3 operator*(const float& s)const;
 		Mat3x3 operator/(const float& s)const;

@@ -1,5 +1,5 @@
 #pragma once
-
+#include <string>
 #include "SMLVector.h"
 
 namespace SML
@@ -12,8 +12,7 @@ namespace SML
 	public:
 		Mat1x3() {}
 		Mat1x3(const float& A, const float& B, const float& C);
-		Mat1x3(const Vector3& v);
-		Mat1x3(const Point3& v);
+		Mat1x3(const Vec3f& v);
 
 		float a = 0, b = 0, c = 0;
 
