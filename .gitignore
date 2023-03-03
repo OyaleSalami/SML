@@ -6,5 +6,4 @@
 *.lastbuildstate
 /.vs
 /x64/Debug
-/Debug
 /xero.txt

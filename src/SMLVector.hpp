@@ -22,6 +22,7 @@ namespace SML
 	template<class T>
 	float Vec2<T>::magnitude() const
 	{
+		//TODO: Check if casting adds any overhead
 		return sqrt(double(x * x) + double(y * y));
 	}
 
@@ -158,17 +159,13 @@ namespace SML
 	template<class T>
 	Vec3<T> Vec3<T>::operator+(const Vec3& a) const
 	{
-		x += a.x;
-		y += a.y;
-		z += a.z;
+		return Vec3<T>(x + a.x, y + a.y, z + a.z);
 	}
 
 	template<class T>
 	Vec3<T> Vec3<T>::operator-(const Vec3& a) const
 	{
-		x -= a.x;
-		y -= a.y;
-		z -= a.z;
+		return Vec3<T>(x - a.x, y - a.y, z - a.z);
 	}
 
 	template<class T>
@@ -207,8 +204,8 @@ namespace SML
 		return Vec3(x * a, y * a, z * a);
 	}
 
-	//template<class T>
-	/*Vec3<T> Vec3<T>::operator*(const Mat3x3& a) const
+	/*template<class T>
+	Vec3<T> Vec3<T>::operator*(const Mat3x3& a) const
 	{
 		return Vec3(
 			((x * a.m[0][0]) + (y * a.m[1][0]) + (z * a.m[2][0])),

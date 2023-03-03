@@ -1,5 +1,5 @@
 #include <iostream>
-#include "SMLVector.h"
+#include "SMLVector.hpp"
 
 int main()
 {

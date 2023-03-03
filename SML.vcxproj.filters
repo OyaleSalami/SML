@@ -15,43 +15,37 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\SMLVector.cpp">
+    <ClCompile Include="src\SMLVector.hpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\SMLMat3x3.cpp">
+    <ClCompile Include="src\SMLMat3x3.hpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\SML.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\SMLMat2x2.cpp">
+    <ClCompile Include="src\SMLMat2x2.hpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\SMLMat4x4.cpp">
+    <ClCompile Include="src\SMLMat4x4.hpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\SMLFunc.cpp">
+    <ClCompile Include="src\SMLFunc.hpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\SMLMat1x3.cpp">
+    <ClCompile Include="src\SMLMat1x3.hpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\SMLMat3x1.cpp">
+    <ClCompile Include="src\SMLMat3x1.hpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\SMLMat1x4.cpp">
+    <ClCompile Include="src\SMLMat1x4.hpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\SMLMat4x1.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\SMLEuler.cpp">
+    <ClCompile Include="src\SMLMat4x1.hpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\SMLQuat.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\SMLTransform.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -96,6 +90,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\SMLDef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SMLTransform.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\SMLTransform.h">
