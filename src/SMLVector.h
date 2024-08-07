@@ -18,7 +18,7 @@ namespace SML
 
 		float Length() const;
 		float LengthSqr() const;
-		float dot(const Vector3& a) const;
+		float Dot(const Vector3& a) const;
 
 		Vector3 Normalized() const;
 		Vector3 Cross(const Vector3& a) const;
@@ -32,6 +32,9 @@ namespace SML
 		Vector3 operator*(const Mat3x3& a) const;
 
 		Vector3 Scale(const float& a, const float& b, const float& c) const;
+
+		Vector3 Zero() const;
+		Vector3 One() const;
 	};
 
 	class Vector2
@@ -45,7 +48,7 @@ namespace SML
 
 		float Length() const;
 		float LengthSqr() const;
-		float dot(const Vector2& a) const;
+		float Dot(const Vector2& a) const;
 
 		Vector2 Normalized() const;
 		Vector2 Cross(const Vector2& a) const;

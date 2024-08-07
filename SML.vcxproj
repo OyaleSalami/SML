@@ -171,6 +171,7 @@
     <ClCompile Include="src\SMLQuat.cpp" />
     <ClCompile Include="src\SMLVector.cpp" />
     <ClCompile Include="src\SMLTransform.cpp" />
+    <ClCompile Include="src\utility\SMLUtility.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\SMLDef.h" />
@@ -188,6 +189,7 @@
     <ClInclude Include="src\SMLQuat.h" />
     <ClInclude Include="src\SMLVector.h" />
     <ClInclude Include="src\SMLTransform.h" />
+    <ClInclude Include="src\utility\SMLUtility.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
