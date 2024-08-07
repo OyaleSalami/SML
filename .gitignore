@@ -1,9 +1,44 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
 *.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Temporary Files
 *.log
 *.tlog
 *.idb
 *.pdb
 *.lastbuildstate
-/.vs/SML/v17
-/.vs/SML/FileContentIndex
-/x64/Debug
+
+# Temporary Folders
+.vs/
+debug/
+bin/
