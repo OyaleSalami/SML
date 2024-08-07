@@ -1,10 +1,12 @@
 # Simple Math Library
-![sml](logo.png)
 
-Simple Math Library (*SML*) is a simple row-ordered math library For computer graphics(CG) applications.
-It is platform independent and does not require any dependency.
-It should work with any C++ compiler but it is recommended that you use ```MSVC```
+<img align="left" alt="SML Logo" width="120px" src="logo.png"/>
 
+Simple Math Library (*SML*) is a row-ordered math library For computer graphics(CG) applications.
+It is platform independent and does not require any additional dependencies.
+It should work with any C++ compiler but it is recommended that you use ```MSVC``` 
+
+<br></br>
 ## Documentation
 Check out the documentation for using the library here:
 
