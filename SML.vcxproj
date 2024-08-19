@@ -173,9 +173,9 @@
     <ClCompile Include="src\SMLMat4x4.hpp" />
     <ClCompile Include="src\SMLQuat.cpp" />
     <ClCompile Include="src\SMLVector.hpp" />
+    <ClCompile Include="src\utility\SMLUtility.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\SMLDef.h" />
     <ClInclude Include="src\SMLEuler.h" />
     <ClInclude Include="src\SMLMat1x4.h" />
     <ClInclude Include="src\SMLMat4x1.h" />
@@ -191,6 +191,7 @@
     <ClInclude Include="src\SMLTransform.h" />
     <ClInclude Include="src\SMLTransform.hpp" />
     <ClInclude Include="src\SMLVector.h" />
+    <ClInclude Include="src\utility\SMLUtility.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

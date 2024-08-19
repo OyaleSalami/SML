@@ -1,5 +1,4 @@
 #pragma once
-#include <math.h>
 
 class Mat3x3;
 class Mat2x2;

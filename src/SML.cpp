@@ -3,9 +3,9 @@
 
 int main()
 {
-	SML::Vec2f vec1, vec2;
+	SML::Vec2d vec1;
+
 	vec1.scale(1, 1);
 	std::cout << "Hello From This Side Of The SML Library!" << std::endl;
-
 	std::cin.get();
 }

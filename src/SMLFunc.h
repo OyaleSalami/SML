@@ -1,7 +1,6 @@
 #pragma once
 #include <xmmintrin.h>
 #include <mmintrin.h>
-#include "SMLDef.h"
 #include "SMLMat1x4.h"
 #include "SMLMat4x4.h"
 #include "SMLVector.hpp"

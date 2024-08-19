@@ -1,5 +1,4 @@
 #pragma once
-#include <string>
 #include "SMLVector.h"
 
 namespace SML
